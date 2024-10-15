@@ -24,5 +24,6 @@ def dif_ciph(words):
                 new_item = item + last_item
                 new_item = chr(new_item)
                 last_item = ord(new_item)
+            new_item = str(new_item)
             new_string += new_item
         return new_string
