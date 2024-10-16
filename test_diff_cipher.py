@@ -29,19 +29,19 @@ def test_dif_ciph_single_character():
 def test_dif_ciph_special_characters():
     # Test for special characters in a string
     result = dif_ciph("!@#")
-    assert result == [33, 12, -32]
+    assert result == [33, 31, -29]
 
 def test_dif_ciph_list_decoding_special_characters():
     # Test for decoding a list with special characters
-    result = dif_ciph([33, 12, -32])
+    result = dif_ciph([33, 31, -29])
     assert result == "!@#"
 
 def test_dif_ciph_mixed_string():
     # Test a mixed string with both letters and numbers
     result = dif_ciph("a1b2c3")
-    assert result == [97, 49, -48, 49, -48, 49]
+    assert result == [97, -48, 49, -48, 49, -48]
 
 def test_dif_ciph_mixed_list():
     # Test a mixed list of encoded values with letters and differences
-    result = dif_ciph([97, 49, -48, 49, -48, 49])
+    result = dif_ciph([97, -48, 49, -48, 49, -48])
     assert result == "a1b2c3"
